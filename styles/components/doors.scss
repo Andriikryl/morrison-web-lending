@@ -1,0 +1,45 @@
+.doors{
+    background-color: hsla(0, 0%, 3%, 1);
+    padding-block: 80px;
+    background-image: url(/public/images/doors/doors.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    background-size: 657px;
+    .doors__box{
+        max-width: 600px;
+        .doors__title{
+            font-family: 'AkzidenzGrotesk';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 56px;
+            line-height: 56px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #E8EBD8;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+            &::after{
+                content: "";
+                display: inline-block;
+                width: 120px;
+                height: 1px;
+                background-color: hsla(0, 87%, 41%, 1) ;
+            }
+        }
+        .doors__desc{
+            font-family: 'Trade Gothic LT Std';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            text-align: center;
+            color: #E8EBD8;
+            &:where(:nth-child(2), :nth-child(3)){
+                margin-block-end: 30px;
+            }
+        }
+    }
+}
