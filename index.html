@@ -7,7 +7,38 @@
     <title>Vite App</title>
   </head>
   <body>
-    
+    <main>
+      <header class="header">
+        <div class="container flex header__container">
+          <a class="logo" href="#">
+            <img src="./images/header/logo.svg" alt="Jim-Morrison logo" />
+          </a>
+          <nav class="nav | flex" title="Main navigation" data-menu>
+            <ul class="nav__list | flex">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Biography</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">The Doors</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Albums</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Store</a>
+              </li>
+          </nav>
+          <button
+            class="burger"
+            aria-label="open menu"
+            aria-hidden="false"
+            data-burger
+          >
+            <span class="burger__line"></span>
+          </button>
+        </div>
+      </header>
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
