@@ -1,0 +1,120 @@
+.product{
+    background-color: hsla(180, 1%, 16%, 1);
+    padding-block-start: 60px;
+    padding-block-end: 120px;
+    .product__title{
+        font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 73px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #E8EBD8;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        margin-block-end: 40px;
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 120px;
+            height: 1px;
+            background-color: hsla(0, 87%, 41%, 1) ;
+        }
+    }
+}
+
+$mobile-break: 668px;
+$desktop-break: 1024px;
+
+.snapslider-card {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  max-width: 260px;
+  list-style: none;
+  .product__image{
+      padding: 43px 10px;
+      background-color: hsla(0, 0%, 9%, 1);
+      margin-block-end: 25px;
+      img{
+          object-fit: cover;
+      }
+  }
+  .product__item-title{
+      font-family: 'PT Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      color: #E8EBD8;
+      margin-block-end: 10px;
+  }
+  .product__price{
+      font-family: 'PT Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #E8EBD8;
+  }
+
+  @media only screen and (min-width: $desktop-break) {
+    font-size: 1.75rem;
+  }
+
+}
+.ezd-snapslider {
+  margin-bottom: 2rem;
+  position: relative;
+  .snapslider-scroll {
+    display: flex;
+    gap: 60px;
+    flex-wrap: nowrap;
+    height: auto;
+    width: auto;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.swiper-button-next{
+    background-image: url(/public/images/product/rigth.svg);
+    background-size: 65px;
+    background-repeat: no-repeat;
+    padding: 8px 36px;
+    position: relative;
+}
+
+.swiper-button-prev{
+    background-image: url(/public/images/product/left.svg);
+    background-size: 65px;
+    background-repeat: no-repeat;
+    padding: 8px 36px;
+    position: relative;
+
+}
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+
+.btn-grup{
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    padding-block-start: 85px;
+    left: calc(50% - 65px);
+}

@@ -21,6 +21,7 @@
             flex-direction: column;
             gap: 40px;
             align-items: center;
+            margin-block-end: 40px;
             &::after{
                 content: "";
                 display: inline-block;

@@ -1,7 +1,8 @@
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
 import "./styles/main.scss";
 
-import { disableScroll } from "./js/disable-scroll";
-import { enableScroll } from "./js/enable-scroll";
+// import styles bundle
 
 (function () {
   const burger = document?.querySelector("[data-burger]");
@@ -42,3 +43,17 @@ import { enableScroll } from "./js/enable-scroll";
     });
   });
 })();
+
+let swiper = new Swiper(".snapslider-overflow", {
+  cssMode: true,
+  speed: 1000,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  wrapperClass: "snapslider-scroll",
+  slideClass: "snapslider-card",
+  slidesPerView: "auto",
+  mousewheel: true,
+  keyboard: true,
+});
