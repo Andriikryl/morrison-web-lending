@@ -1,0 +1,46 @@
+.footer{
+    background: linear-gradient(180deg, hsla(0, 80%, 22%, 1) 70%,hsla(69, 32%, 88%, 1)6%);
+    .footer__top{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 64px;
+        padding-block: 36px;
+        .footer__list{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 52px;
+            align-items: center;
+            .list__link{
+                list-style: none;
+                font-family: 'AkzidenzGrotesk';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 16px;
+                text-decoration: none;
+                color: #E8EBD8;
+            }
+        }
+    }
+}
+
+.list__item{
+    list-style: none;
+}
+
+.footer__botom{
+    padding-block: 21px;
+}
+
+.footer__botom-descr{
+    font-family: 'Trade Gothic LT Std';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #0D0D0D;
+}
