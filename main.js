@@ -1,6 +1,8 @@
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import "./styles/main.scss";
+import { disableScroll } from "./js/disable-scroll";
+import { enableScroll } from "./js/enable-scroll";
 
 // import styles bundle
 
@@ -57,3 +59,15 @@ let swiper = new Swiper(".snapslider-overflow", {
   mousewheel: true,
   keyboard: true,
 });
+
+const header = document.getElementById("page-header");
+const intercept = document.createElement("div");
+
+intercept.setAttribute("data-observer-intercept", "");
+header.before(intercept);
+
+const observer = new IntersectionObserver(([entry]) => {
+  header.classList.toggle("active", !entry.isIntersecting);
+});
+
+observer.observe(intercept);

@@ -44,3 +44,12 @@
         }
     }
 }
+
+
+@media (max-width: 1235px) {
+    .doors__box{
+        background-color: hsla(0, 0%, 3%, .6);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+    }
+}

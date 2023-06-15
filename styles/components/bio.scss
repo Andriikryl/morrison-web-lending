@@ -58,3 +58,11 @@
         }
     }
 }
+
+@media (max-width: 1235px) {
+    .bio__text{
+        background-color: hsla(0, 0%, 3%, .6);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+    }
+}

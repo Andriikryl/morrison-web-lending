@@ -2,8 +2,10 @@
 
 .header{
     background-color: hsla(0, 0%, 3%, 1);
-
-  .header__container{
+    position: sticky;
+    top: 0;
+    transition: box-shadow 200ms cubic-bezier(0.33, 1, 0.68, 1);
+    .header__container{
     align-items: center;
     justify-content: space-between;
   }
@@ -158,4 +160,14 @@
     -ms-transform: none;
     -o-transform: none;
   }
+  
+
+  header.active {
+    background-color: hsla(0, 0%, 3%, .1);
+    backdrop-filter: blur(20px); 
+    box-shadow:  hsl(69, 32%, 88%) 0 0.5rem 1rem;
+    transition-duration: 400ms;
+    z-index: 100;
+  }
+  
   
