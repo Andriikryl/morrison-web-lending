@@ -3,6 +3,8 @@ import "swiper/css/bundle";
 import "./styles/main.scss";
 import { disableScroll } from "./js/disable-scroll";
 import { enableScroll } from "./js/enable-scroll";
+import { gsap } from "gsap";
+import imagesLoaded from "imagesloaded";
 
 // import styles bundle
 
@@ -71,3 +73,49 @@ const observer = new IntersectionObserver(([entry]) => {
 });
 
 observer.observe(intercept);
+
+// gsap animathion
+gsap.fromTo(
+  ".logo",
+  { x: -200, opacity: 0 },
+  { duration: 1, delay: 0.5, x: 0, opacity: 1 }
+);
+gsap.fromTo(
+  ".nav__list ",
+  { x: 500, opacity: 0 },
+  { duration: 1, delay: 0.7, x: 0, opacity: 1 }
+);
+
+gsap.fromTo(
+  ".hero__title",
+  { x: 0, opacity: 0 },
+  { duration: 1.5, delay: 1.5, x: 0, opacity: 1 }
+);
+
+gsap.fromTo(
+  ".hero__quto",
+  { x: -200, opacity: 0 },
+  { duration: 1.5, delay: 0.7, x: 0, opacity: 1 }
+);
+
+gsap.fromTo(
+  ".hero__sub-info",
+  { x: -200, opacity: 0 },
+  { duration: 1.5, delay: 1.2, x: 0, opacity: 1 }
+);
+
+gsap.fromTo(
+  ".hero__image",
+  { x: 0, opacity: 0 },
+  { duration: 2.5, delay: 1.2, x: 0, opacity: 1 }
+);
+
+gsap.from(".bio__title", {
+  scrollTrigger: ".bio__title", // start the animation when ".box" enters the viewport (once)
+  opacity: 1,
+});
+
+gsap.to(".bio__title", {
+  scrollTrigger: ".bio__title", // start the animation when ".box" enters the viewport (once)
+  opacity: 1,
+});
